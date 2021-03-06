@@ -14,7 +14,7 @@ const boardStyle = {
   justifyContent: 'center',
   alignItems: 'center',
   flexWrap: 'wrap',
-  marginTop: '5%',
+  marginTop: '4%',
 };
 
 export default app;

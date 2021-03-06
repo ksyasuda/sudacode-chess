@@ -155,7 +155,7 @@ export default function MyChess() {
   const [width, setWidth] = useState(550);
   useEffect(() => {
     if (window !== undefined) {
-      setWidth(window.innerWidth - 120);
+      setWidth(window.innerHeight - 120);
     }
   }, []);
 
