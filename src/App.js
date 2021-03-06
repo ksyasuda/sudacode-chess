@@ -1,10 +1,23 @@
 import React from 'react';
 import MyBoard from './components/board/board';
+import './App.css';
 
 const app = () => {
   return (
-    <section style={boardStyle}>
-      <MyBoard />
+    <section>
+      <h2
+        id="outcome"
+        style={{
+          justifyContent: 'center',
+          fontSize: 'xxLarge',
+          fontWeight: 'bold',
+          margin: '20px 0px 0px 0px',
+          padding: '0px',
+        }}
+      ></h2>
+      <div style={boardStyle}>
+        <MyBoard />
+      </div>
     </section>
   );
 };

@@ -60,6 +60,16 @@ class HumanVsHuman extends Component {
     }));
   };
 
+  checkGameOver = () => {
+    console.log('checking game over');
+    if (this.game.in_checkmate()) {
+      console.log('In checkmate');
+      const outcome = document.querySelector('#outcome');
+      outcome.innerText = 'Checkmate!';
+      outcome.style.display = 'block';
+    }
+  };
+
   onDrop = ({ sourceSquare, targetSquare }) => {
     // see if the move is legal
     let move = this.game.move({
@@ -75,6 +85,7 @@ class HumanVsHuman extends Component {
       history: this.game.history({ verbose: true }),
       squareStyles: squareStyling({ pieceSquare, history }),
     }));
+    this.checkGameOver();
   };
 
   onMouseOverSquare = square => {
