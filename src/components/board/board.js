@@ -66,7 +66,7 @@ class HumanVsHuman extends Component {
       console.log('In checkmate');
       const outcome = document.querySelector('#outcome');
       outcome.innerText = 'Checkmate!';
-      outcome.style.display = 'block';
+      outcome.style.display = 'flex';
     }
   };
 
