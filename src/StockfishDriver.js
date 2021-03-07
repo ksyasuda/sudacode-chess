@@ -7,21 +7,30 @@ import MyStockfish from './components/stockfish/stockfish';
 
 class StockfishDriver extends Component {
   state = {
-    width: 550
-  }
+    width: 550,
+  };
 
   componentDidMount() {
-    if(window !== undefined) {
-      this.setState({width: window.innerHeight - 120})
-    };
+    if (window !== undefined) {
+      this.setState({ width: window.innerHeight - 120 });
+    }
   }
 
   render() {
     return (
       <>
         <Helmet>
-          <style>{"body {background-color: #282c34}"}</style>
+          <style>{'body {background-color: #282c34}'}</style>
         </Helmet>
+        <h2
+          id="outcome"
+          style={{
+            justifyContent: 'center',
+            fontSize: 'xxLarge',
+            fontWeight: 'bold',
+            margin: '20px, 0px 0px 0px',
+          }}
+        ></h2>
         <div style={boardsContainer}>
           <MyStockfish>
             {({ position, onDrop }) => (
@@ -47,7 +56,7 @@ const boardsContainer = {
   display: 'flex',
   justifyContent: 'space-around',
   alignItems: 'center',
-  marginTop: '3%'
+  marginTop: '3%',
 };
 const boardStyle = {
   borderRadius: '5px',

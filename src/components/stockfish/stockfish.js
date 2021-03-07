@@ -53,6 +53,9 @@ class MyStockfish extends Component {
 
     setInterval(function () {
       if (announced_game_over) {
+        const outcome = document.querySelector('#outcome');
+        outcome.innerText = 'Checkmate!';
+        outcome.style['display'] = 'flex';
         return;
       }
 
